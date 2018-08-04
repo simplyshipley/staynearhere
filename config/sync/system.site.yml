@@ -1,0 +1,14 @@
+uuid: 82b21e48-6944-4822-825d-371446e7fe08
+name: 'Stay Near Here'
+mail: bo@bastardize.me
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
