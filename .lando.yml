@@ -1,0 +1,4 @@
+name: stay-near-here
+recipe: drupal8
+config:
+  webroot: web
