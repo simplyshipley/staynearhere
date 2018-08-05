@@ -37,14 +37,14 @@ composer-install: ##@composer Runs composer install in the web folder
 import-db: ##@local site building Runs MySQL commands and imports seed DB
 	lando db-import db_dump/snh.sql.gz
 
-new-site: ##@local site building Runs composer install and imports seed db
-	lando composer-install
-	lando import-db
-	lando cim
+new-site: ##@local site building Runs composer install and imports seed DB and config
+	-make composer-install
+	-make import-db
+	-make cim
 	lando drush updb -y
 	lando drush entup -y
-	lando cron
-	lando cr
+	-make cron
+	-make cr
 
 cim: ##@drupal Runs lando drush cim -y
 	lando drush cim -y
@@ -59,10 +59,10 @@ cron: ##@drupal Runs lando drush cron -y
 	lando drush cron -y
 
 provision: ##@drupal Runs site provisioning steps
-	make composer-install
-	lando cim
+	-make composer-install
+	-make cim
 	lando drush updb -y
 	lando drush entup -y
-	lando cron
-	lando cr
+	-make cron
+	-make cr
 
